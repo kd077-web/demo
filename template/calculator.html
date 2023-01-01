@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your calculator</title>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <form method="post">
+    {% csrf_token %}    
+        <div>
+            <label>num1</label>
+            <input type="text" name="n1" value="{{n1}}">
+        </div>
+        <div>
+            <select name="opr">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <div>
+            <label>num2</label>
+            <input type="text" name="n2" value="{{n2}}">
+        </div>
+        <div>
+            <input type="text" name="ans" value="{{n3}}"><br>
+            <label>output</label>
+
+        </div>
+        <div>
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>

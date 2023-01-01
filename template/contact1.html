@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<body>
+    <section class="contact">
+        <div class="ctd">
+            <div class="img">
+                <img src="contact1.png" width="300px">
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>E-mail</p>
+                <input type="email" placeholder="Enter your Email" name="email" required>
+                <p>Password</p>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="submit" value="submit">
+                <p><input type="checkbox">Remember Me</p>
+
+
+            </form>
+            <div>
+                {% for message in messages %}
+                <h1>{{ message }}</h1>
+                {% endfor %}
+            </div>
+</body>
+</html>
+ 
